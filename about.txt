@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Anek Kannada
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/anekkannada/v14/raxcHiCNvNMKe1CKFsINYFlgkEIwGa8nL6ruWJg1j--h8pvBKSiw4dFxEQukVReA1oef.ttf
-- Font License: undefined)
