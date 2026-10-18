@@ -15,6 +15,8 @@
   (function () {
     var r = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!r && !/[?&]nofx/.test(location.search)) document.documentElement.classList.add('intro');
+    // Failsafe: the intro must never trap a visitor, even if another script fails to load or throws.
+    setTimeout(function () { var i = document.getElementById('intro'); if (i) i.parentNode.removeChild(i); }, 4500);
   })();
 </script>
 </head>
