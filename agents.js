@@ -93,7 +93,7 @@
 
   /* ---------- Arrange: drag-and-drop carousel ---------- */
   var deck = document.querySelector('.stack');
-  if (deck) (function () {
+  if (deck && window.innerWidth > 600) (function () {
     var cur = mkCursor('Arrange Agent', '#8b5cf6');
     var inView = watch(deck);
     var pos = { x: -60, y: 400 }, want = null, grabbing = false;

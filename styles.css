@@ -175,8 +175,6 @@ a.cell:hover { background: #fcfcfd; }
 .case .c { opacity: 0; }
 .case .c.on { opacity: 1; }
 .case .ready .c { opacity: 0; } .case .ready .c.on { opacity: 1; }
-.case .video { position: relative; aspect-ratio: 16 / 9; margin: 0 0 44px; border-radius: 12px; overflow: hidden; background: #25272c; }
-.case .video iframe, .case .video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* ---------- hovering agents ---------- */
 .hero h1 { min-height: 3.06em; }
@@ -189,3 +187,16 @@ h2[data-tip], h3[data-tip] { text-decoration: underline dotted rgba(11, 11, 12, 
 .stack { grid-auto-rows: 1fr; }
 .stack .cell { position: relative; }
 .stack .cell.grab { z-index: 20; background: #fff !important; box-shadow: 0 22px 44px -14px rgba(15, 23, 42, .4); transition: box-shadow .2s; cursor: grabbing; }
+
+/* ---------- small phones ---------- */
+.brand, .nav .pill { white-space: nowrap; }
+@media (max-width: 480px) {
+  .nav .wrap { height: 56px; }
+  .nav .pill { padding: 8px 14px; font-size: 13px; }
+  .hero { padding-top: 48px; }
+  .actions .pill { padding: 10px 16px; }
+  .cell { padding: 24px 20px 28px; }
+  .term pre { font-size: 12px; padding: 16px 16px 0; }
+  .case { padding: 48px 20px 72px; }
+}
+@media (max-width: 400px) { .brand .bn { display: none; } }
