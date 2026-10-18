@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A multi-agent engineering system, shipped to a team — Samuel Kalongo</title>
+<meta name="description" content="Eleven specialised agents that carry work from a vague idea to a draft pull request, with access limits enforced in the tool layer and a human on every merge.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css"></head>
+<body>
+<header class="nav"><div class="wrap"><a class="brand" href="../../"><span class="mark">SK</span>Samuel Kalongo</a><a class="pill" href="../../#contact">Get in touch</a></div></header>
+<article class="case">
+<a class="back" href="../../#work">← All work</a>
+<h1>A multi-agent engineering system, shipped to a team</h1>
+<p class="sub">Eleven specialised agents that carry work from a vague idea to a draft pull request, with access limits enforced in the tool layer and a human on every merge.</p>
+<div class="meta"><span class="chip">Agents</span><span class="chip">Model Context Protocol</span><span class="chip">Governance</span><span class="chip">Team tooling</span></div>
+<h2>Problem</h2>
+<p>Most "AI in the workflow" setups are one person pasting tickets into a chat window. That is slow, inconsistent, and nothing structural limits how far an assistant can reach.</p>
+<p>The design goals were different. Make AI assistance a <strong>repeatable part of daily delivery</strong> for a small team. Keep humans in control of the work tracker, the repository, and the definition of "done". And make the system something other developers can adopt, not just its author.</p>
+<h2>Process</h2>
+<p>I treated it as a product, not a folder of prompts.</p>
+<ul><li>The work item is both the <strong>input contract and the output record</strong>. Briefs, review reports and done-markers are the audit trail in between.</li><li>The agent system lives in <strong>its own versioned repository</strong>. Changes go through the same branch-and-pull-request flow as production code, peer-reviewed and merged.</li><li>It ships as a distributable bundle with team-facing governance documentation and a setup guide that takes a new developer from nothing to a working, least-privilege integration in about ten minutes.</li><li>Two colleagues besides me now run it in their own daily work.</li></ul>
+<h2>Architecture</h2>
+<pre><code>idea            -&gt; Discovery  -&gt; work item + 7-10 child tasks
+work item       -&gt; Scoping    -&gt; implementation brief   (read-only)
+                   [ human gate: brief review ]
+brief           -&gt; Backend, then Frontend
+                   [ human gate: implementation ]
+changes         -&gt; Reviewer   -&gt; review report
+                   [ human gate: code review ]
+approved        -&gt; Documentation  |  Tests
+approved        -&gt; PR agent   -&gt; DRAFT pull request
+                   [ human gate: a teammate reviews and merges ]
+merged          -&gt; Tracker    -&gt; closes only on proof</code></pre>
+<p>Eleven agents cover discovery, scoping, backend and frontend implementation, review, testing, documentation, cross-cutting fixes, pull request creation and work-item tracking.</p>
+<p><strong>Only four of them hold any external access.</strong> The other seven read and write files and nothing else.</p>
+<h2>Implementation</h2>
+<h3>One narrow integration surface</h3>
+<p>The whole connection to the work tracker and repositories is a single official Model Context Protocol server entry. There is no custom API client and no webhook.</p>
+<ul><li>The server is <strong>pinned to one organisation at launch</strong>, so it cannot reach another one whatever the token would allow.</li><li>The access token is scoped to <strong>work items read/write and code read only</strong>. No build, release or identity permissions.</li><li>The token lives in an environment variable. <strong>No secret is ever in a committed file.</strong></li></ul>
+<h3>Access boundaries live in the tool layer</h3>
+<p>Each agent declares its permitted tools in its own definition. An agent that was not granted a system physically cannot call it. That is a constraint, not a polite request in a prompt.</p>
+<h3>Four agents with access, each narrow</h3>
+<ul><li><strong>Discovery</strong> turns a vague idea into a work item and child tasks through a one-question-at-a-time interview, and keeps the transcript. The one-question rule is the point: it forces the team to reason in systems rather than fill in a form.</li><li><strong>Scoping</strong> turns a work item into a brief and has <strong>no write access at all</strong>. It only fetches comment history when the description is too thin to work from, a deliberate budget of roughly 10–12K tokens per brief. It halts rather than inventing content when scope is entangled or the item is too large.</li><li><strong>PR</strong> creates draft pull requests only. Pre-flight requires an approved review, clean working trees and a pushed, non-default branch. The description is grounded in the actual diff and commit log, never in what the brief claimed. It prints the description and waits for an explicit confirmation before anything is posted.</li><li><strong>Tracker</strong> closes work under the completion rule below.</li></ul>
+<h2>Reliability</h2>
+<ul><li><strong>The three-link completion rule.</strong> Nothing closes without a completed pull request, a passing test run, and a documentation file that actually exists. Work-in-progress handoff notes are rejected as evidence. This is what stops the system from congratulating itself.</li><li><strong>Order matters.</strong> The state transition happens first and the comment second, so a failed transition never leaves a misleading "closed" comment on an open item.</li><li><strong>State only moves toward done.</strong> The tracker can never reopen an item or auto-close a parent.</li><li><strong>Draft-only, never auto-complete.</strong> The PR agent cannot merge, by design.</li><li><strong>Agents cannot spawn or call each other.</strong> All coordination is through files on disk, so the audit trail is readable by a person and a misbehaving agent writes a bad file rather than triggering a cascade.</li><li><strong>Permanently human:</strong> merges, deploys, production migrations, and marking anything ready for review.</li><li>Supporting guardrails: architecture fitness validation with six rules, where existing violations are tracked rather than waived, and a self-hosted build agent for the team's pipeline.</li></ul>
+<h2>Result</h2>
+<p>An agent system that is <strong>in the team's daily delivery workflow</strong>, adopted by two fellow developers, and documented well enough that a new developer is productive in about ten minutes.</p>
+<p>What it demonstrates is the part that is hard to fake: not "I built agents", but how to bound them, how to make them cheap, how to keep them honest about what changed, and how to ship the whole thing to other engineers as something versioned and reviewable.</p>
+<p class="conf">Employer systems, repositories, work items and client names are deliberately left out. The mechanism is the point.</p>
+</article>
+</body></html>
