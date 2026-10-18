@@ -1,29 +1,55 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A workflow engine for recruitment and onboarding — Samuel Kalongo</title>
-<meta name="description" content="Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.">
+<title>A task-workflow engine for recruitment and onboarding — Samuel Kalongo</title>
+<meta name="description" content="How a reusable workflow template becomes a live run, with ordered tasks, a full task state machine, and tokenised links that let outside vendors act without a login.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles.css"></head>
 <body>
+<div class="rulers" aria-hidden="true"><i class="rx"></i><i class="ry"></i></div><i class="guide gx" aria-hidden="true"></i><i class="guide gy" aria-hidden="true"></i><div id="cursors" aria-hidden="true"></div>
+<script id="glossary" type="application/json">[{"match":"scoped access","tip":"Each agent can only use the tools it was explicitly given. The limit lives in its definition, not in a prompt asking it to behave."},{"match":"read-only scoping","tip":"The scoping agent reads a work item and writes a plan, but has no permission to change anything."},{"match":"draft pull requests","tip":"A draft pull request proposes code changes but can't be merged until a human marks it ready."},{"match":"three-link completion","tip":"A task only closes when three pieces of proof exist: a finished pull request, a passing test run, and real documentation."},{"match":"human approval gates","tip":"Checkpoints where a person must review and approve before the work moves on."},{"match":"coordination through files","tip":"Agents never call each other. They leave files for the next step, so a person can read the whole trail."},{"match":"guardrails","tip":"Hard limits enforced by the system itself, rather than instructions an AI could ignore."},{"match":"multi-agent","tip":"Several AI agents, each with its own narrow job, working as one system."},{"match":"state machine","tip":"A model where something is always in exactly one defined state and can only move between states by allowed steps."},{"match":"tokenised link","tip":"A secure one-off web address that proves who you are, so you can finish one task without creating an account."},{"match":"leaves a trail","tip":"An audit trail: a permanent record of who changed what, and when."},{"match":"instance","tip":"One running copy of a template, such as a single person's actual onboarding."},{"match":"socratic","tip":"Teaching by asking guiding questions instead of handing over answers."},{"match":"model context protocol","tip":"An open standard that lets AI models connect to tools and data in a controlled, uniform way."},{"match":"application insights","tip":"Microsoft's monitoring service for tracing errors and performance in running applications."},{"match":"entity framework","tip":"A .NET library for working with a database through C# objects instead of hand-written SQL."},{"match":"ef migrations","tip":"Versioned scripts that change a database's structure safely as the application evolves."},{"match":"n8n","tip":"A visual workflow-automation platform: connect apps and APIs with drag-and-drop steps."},{"match":"webhooks","tip":"A way for one system to notify another instantly when something happens."},{"match":"agentic workflows","tip":"Workflows where an AI decides some of the steps itself, using tools, instead of following a fixed script."},{"match":"prompt engineering","tip":"Writing instructions for an AI so it reliably does what you intend."},{"match":"self-hosted build agent","tip":"A machine you run yourself that automatically builds and tests code."},{"match":"deployment pipelines","tip":"Automated steps that carry code from a developer's machine to a live server."}]</script>
 <header class="nav"><div class="wrap"><a class="brand" href="../../"><span class="mark">SK</span>Samuel Kalongo</a><a class="pill" href="../../#contact">Get in touch</a></div></header>
 <article class="case">
 <a class="back" href="../../#work">← All work</a>
-<h1>A workflow engine for recruitment and onboarding</h1>
-<p class="sub">Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.</p>
-<div class="meta"><span class="chip">C# / .NET</span><span class="chip">State machines</span><span class="chip">Integrations</span><span class="chip">AI scoring</span></div>
+<h1>A task-workflow engine for recruitment and onboarding</h1>
+<p class="sub">How a reusable workflow template becomes a live run, with ordered tasks, a full task state machine, and tokenised links that let outside vendors act without a login.</p>
+<div class="meta"><span class="chip">C# / .NET</span><span class="chip">State machines</span><span class="chip">Audit trails</span></div>
+
 <h2>Problem</h2>
-<p>Recruitment and onboarding work crosses people and systems: hiring managers, HR, and external vendors, with integrations to Sage 300, LinkedIn and Careers24. It needed to be modelled as real workflows with rules, not a checklist.</p>
-<h2>Process</h2>
-<p>Built end to end as part of a three-person team at Genghis Technology, including the workflow system and the employee onboarding flow.</p>
+<p>Recruitment and onboarding are chains of tasks that pass between different people: hiring managers, HR, and outside vendors who don't have accounts in the system.</p>
+<p>The work had to be <strong>repeatable</strong> (the same steps every time), <strong>flexible</strong> (tasks change hands, get skipped and run late), and <strong>auditable</strong> (who did what, and when).</p>
+<h2>How it works</h2>
+<h3>1. A template defines the shape</h3>
+<p>A workflow template is the reusable blueprint. It lists the tasks, the order they run in, who each task is assigned to, and the due-date rule for each one. A template holds no live data.</p>
+<h3>2. An instance is the live run</h3>
+<p>Starting a workflow creates an <strong>instance</strong> from a template. The instance is the runtime object: the real tasks, for a real person, with real owners and due dates. Templates and instances are kept separate on purpose, so the blueprint stays clean while many runs happen at once.</p>
+<h3>3. Rules decide who does what, and when</h3>
+<p>Each task carries <strong>assignment</strong>, <strong>ordering</strong> and <strong>due-date</strong> rules. Ordering decides when a task becomes available. Due dates decide when it becomes overdue.</p>
+<h3>4. Every task is a small state machine</h3>
+<p>A task is always in a defined state, and only certain moves are allowed:</p>
+<ul><li><strong>Completed</strong>: the assignee finishes it.</li><li><strong>Declined</strong>: the assignee refuses it.</li><li><strong>Skipped</strong>: it is bypassed deliberately.</li><li><strong>Expired</strong>: its due date passes without action.</li><li><strong>Reassigned</strong>: it moves to a different owner.</li></ul>
+<p>Treating these as explicit states, rather than a loose set of flags, is what keeps the workflow predictable when real life gets messy.</p>
+<h3>5. Outside vendors act through a tokenised link</h3>
+<p>A vendor doesn't need an account. They receive a secure, <strong>tokenised link</strong> tied to one task, and can complete it through that link with no login.</p>
+<h3>6. Every change leaves a trail</h3>
+<p>Reassignments and changes to task ordering are recorded in an <strong>audit trail</strong>, so anyone can see how a workflow got from where it started to where it is.</p>
 <h2>Architecture</h2>
-<ul><li><strong>Templates are separate from runtime instances.</strong> A reusable workflow template describes the shape of the work; a live instance is what actually runs for one person.</li><li>Tasks carry assignment, ordering and due-date rules.</li></ul>
-<h2>Implementation</h2>
-<ul><li>A full <strong>task state machine</strong>: completion, decline, skip, expiry and reassignment.</li><li><strong>Token-based external completion.</strong> Vendors complete assigned tasks through secure, tokenised links, with no login and no account.</li><li><strong>Audit trails</strong> that record reassignment and ordering changes.</li><li>The employee onboarding flow, end to end, and a Sage VIP data export.</li><li>A <strong>two-stage AI CV-scoring evaluation</strong>: evidence is extracted first, then mapped against a rubric. Separating the stages keeps the scoring explainable.</li></ul>
+<pre><code>Template (reusable blueprint)
+   |  start
+   v
+Instance (one live run)
+   |-- Task 1 --&gt; active --&gt; completed | declined | skipped | expired | reassigned
+   |-- Task 2 --&gt; (rules decide when it opens)
+   |-- Task 3 ...
+   '-- Audit trail: reassignments + ordering changes
+
+Vendor link (secure token) --&gt; completes ONE task, no login</code></pre>
 <h2>Reliability</h2>
-<p>Every task transition is an explicit state rather than an ad-hoc flag, external access is limited to a single task through a tokenised link, and changes to ownership and ordering are recorded.</p>
+<ul><li>Task state is explicit, so a task is never "sort of done".</li><li>External access is limited to a single task through a tokenised link, rather than an account with wider reach.</li><li>Ownership and ordering changes are recorded, so the history can be reconstructed.</li></ul>
 <h2>Result</h2>
-<p>A workflow system delivered and run in production for a client environment, covering the lifecycle from recruitment through to onboarding and payroll-system export.</p>
+<p>A workflow system built end to end by a three-person team and run in production. Adding a new process means describing it as a template, not writing new code.</p>
 <p class="conf">Employer systems, repositories, work items and client names are deliberately left out. The mechanism is the point.</p>
 </article>
+<script src="../../tooltip.js"></script>
+<script src="../../fx-edit.js"></script>
 </body></html>

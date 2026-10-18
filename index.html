@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Samuel Kalongo — Automation &amp; AI Integration Developer</title>
-<meta name="description" content="Automation &amp; AI Integration Developer. Production AI workflows, integrations and agent systems, built on a full-stack C#/.NET and React/TypeScript background.">
+<title>Samuel Kalongo — AI Automations Engineer</title>
+<meta name="description" content="AI Automations Engineer. Production AI workflows, integrations and agent systems, built on a full-stack C#/.NET and React/TypeScript background.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0c'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='14' text-anchor='middle' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
-  // The build-in-real-time effect is progressive: no JS, reduced motion, or ?nofx all get the plain finished page.
+  // Progressive: no JS, reduced motion, or ?nofx all get the plain page with no intro.
   (function () {
     var r = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!r && !/[?&]nofx/.test(location.search)) document.documentElement.classList.add('fx');
+    if (!r && !/[?&]nofx/.test(location.search)) document.documentElement.classList.add('intro');
   })();
 </script>
 </head>
@@ -24,6 +24,7 @@
 <div class="rulers" aria-hidden="true"><i class="rx"></i><i class="ry"></i></div>
 <i class="guide gx" aria-hidden="true"></i><i class="guide gy" aria-hidden="true"></i>
 <div id="cursors" aria-hidden="true"></div>
+<script id="glossary" type="application/json">[{"match":"scoped access","tip":"Each agent can only use the tools it was explicitly given. The limit lives in its definition, not in a prompt asking it to behave."},{"match":"read-only scoping","tip":"The scoping agent reads a work item and writes a plan, but has no permission to change anything."},{"match":"draft pull requests","tip":"A draft pull request proposes code changes but can't be merged until a human marks it ready."},{"match":"three-link completion","tip":"A task only closes when three pieces of proof exist: a finished pull request, a passing test run, and real documentation."},{"match":"human approval gates","tip":"Checkpoints where a person must review and approve before the work moves on."},{"match":"coordination through files","tip":"Agents never call each other. They leave files for the next step, so a person can read the whole trail."},{"match":"guardrails","tip":"Hard limits enforced by the system itself, rather than instructions an AI could ignore."},{"match":"multi-agent","tip":"Several AI agents, each with its own narrow job, working as one system."},{"match":"state machine","tip":"A model where something is always in exactly one defined state and can only move between states by allowed steps."},{"match":"tokenised link","tip":"A secure one-off web address that proves who you are, so you can finish one task without creating an account."},{"match":"leaves a trail","tip":"An audit trail: a permanent record of who changed what, and when."},{"match":"instance","tip":"One running copy of a template, such as a single person's actual onboarding."},{"match":"socratic","tip":"Teaching by asking guiding questions instead of handing over answers."},{"match":"model context protocol","tip":"An open standard that lets AI models connect to tools and data in a controlled, uniform way."},{"match":"application insights","tip":"Microsoft's monitoring service for tracing errors and performance in running applications."},{"match":"entity framework","tip":"A .NET library for working with a database through C# objects instead of hand-written SQL."},{"match":"ef migrations","tip":"Versioned scripts that change a database's structure safely as the application evolves."},{"match":"n8n","tip":"A visual workflow-automation platform: connect apps and APIs with drag-and-drop steps."},{"match":"webhooks","tip":"A way for one system to notify another instantly when something happens."},{"match":"agentic workflows","tip":"Workflows where an AI decides some of the steps itself, using tools, instead of following a fixed script."},{"match":"prompt engineering","tip":"Writing instructions for an AI so it reliably does what you intend."},{"match":"self-hosted build agent","tip":"A machine you run yourself that automatically builds and tests code."},{"match":"deployment pipelines","tip":"Automated steps that carry code from a developer's machine to a live server."}]</script>
 
 <header class="nav">
   <div class="wrap">
@@ -42,90 +43,90 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow" data-b="type" data-intro>Samuel Kalongo · Johannesburg, South Africa</p>
-    <h1 data-b="type" data-intro>Automation that holds up in production.</h1>
-    <p class="lede" data-b="type" data-intro>I'm an Automation &amp; AI Integration Developer. I build AI-powered workflows, integrations and business systems with APIs, LLMs and workflow platforms, on top of a full-stack background in C#/.NET and React/TypeScript.</p>
-    <div class="actions" data-b="fade" data-intro>
+    <p class="eyebrow">Samuel Kalongo · Johannesburg, South Africa</p>
+    <h1>AI Automations Engineer.</h1>
+    <p class="lede">I'm a developer on a three-person software team. I build AI-powered workflows, integrations and business systems with APIs, LLMs and workflow platforms, on top of a full-stack background in C#/.NET and React/TypeScript.</p>
+    <div class="actions">
       <a class="pill" href="work/agent-system/">Read the case study</a>
       <a class="pill ghost" href="#contact">Get in touch</a>
     </div>
-    <p class="now" data-b="type" data-intro>Currently building production AI tooling at Genghis Technology.</p>
+    <p class="now">Currently building production AI tooling for a software team.</p>
   </div>
-  <svg class="plane p1" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
-  <svg class="plane p2" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
 </section>
 
 <section class="sec" style="padding:0;border-top:0">
   <div class="wrap"><div class="grid c4 stats">
-    <div class="cell" data-b="box"><span class="num" data-b="type">11</span><p data-b="type">specialised agents in one engineering system</p></div>
-    <div class="cell" data-b="box"><span class="num" data-b="type">4</span><p data-b="type">of them hold any external access. The other seven physically cannot.</p></div>
-    <div class="cell" data-b="box"><span class="num" data-b="type">15</span><p data-b="type">reusable engineering skills packaged with the system</p></div>
-    <div class="cell" data-b="box"><span class="num" data-b="type">~10</span><p data-b="type">minutes to onboard a new developer</p></div>
+    <div class="cell"><span class="num">11</span><p>specialised agents in one engineering system</p></div>
+    <div class="cell"><span class="num">4</span><p>of them hold any external access. The other seven physically cannot.</p></div>
+    <div class="cell"><span class="num">15</span><p>reusable engineering skills packaged with the system</p></div>
+    <div class="cell"><span class="num">~10</span><p>minutes to onboard a new developer</p></div>
   </div></div>
 </section>
 
 <section class="sec" id="stories">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow" data-b="type">The evidence</p>
-      <h2 data-b="type">Three kinds of proof.</h2>
-      <p class="sub" data-b="type">Different roles buy different things. Start with whichever one matches yours.</p>
+      <p class="eyebrow">The evidence</p>
+      <h2>Three kinds of proof.</h2>
+      <p class="sub">Different roles buy different things. Start with whichever one matches yours.</p>
     </div>
     <div class="grid c3">
-      <a class="cell" data-b="box" href="work/agent-system/">
-        <span class="tag" data-b="type">The builder</span>
-        <h3 data-b="type">I design agent systems and ship them to a team.</h3>
-        <p data-b="type">A multi-agent engineering system now in my team's daily delivery workflow, run by two colleagues besides me.</p>
-        <span class="more" data-b="fade">Read the case study →</span>
+      <a class="cell" href="work/agent-system/">
+        <span class="tag">The builder</span>
+        <h3>I design agent systems and ship them to a team.</h3>
+        <p>A multi-agent engineering system now in my team's daily delivery workflow, run by two colleagues besides me.</p>
+        <span class="more">Read the case study →</span>
       </a>
-      <a class="cell" data-b="box" href="work/agentic-ai-training/">
-        <span class="tag" data-b="type">The translator</span>
-        <h3 data-b="type">I make agentic AI usable for non-engineers.</h3>
-        <p data-b="type">Internal training that turned agentic workflows and prompt engineering into practical, department-level applications.</p>
-        <span class="more" data-b="fade">Read more →</span>
+      <a class="cell" href="work/agentic-ai-training/">
+        <span class="tag">The translator</span>
+        <h3>I make agentic AI usable for non-engineers.</h3>
+        <p>Internal training that turned agentic workflows and prompt engineering into practical tools, including a Socratic teacher other departments learned to build themselves.</p>
+        <span class="more">Read more →</span>
       </a>
-      <a class="cell" data-b="box" href="#work">
-        <span class="tag" data-b="type">The shipper</span>
-        <h3 data-b="type">I run production systems, not just demos.</h3>
-        <p data-b="type">A recruitment platform and a WhatsApp payroll service, built end to end in a three-person team and owned through incidents.</p>
-        <span class="more" data-b="fade">See the work →</span>
+      <a class="cell" href="#work">
+        <span class="tag">The shipper</span>
+        <h3>I run production systems, not just demos.</h3>
+        <p>A recruitment platform and a WhatsApp payroll service, built end to end in a three-person team and owned through incidents.</p>
+        <span class="more">See the work →</span>
       </a>
     </div>
   </div>
 </section>
 
 <section class="sec" id="system">
-  <svg class="plane p3" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow" data-b="type">Flagship case study</p>
-      <h2 data-b="type">Agents with guardrails, not just prompts.</h2>
-      <p class="sub" data-b="type">The interesting part isn't the number of agents. It's what each one is, and isn't, allowed to do.</p>
+      <p class="eyebrow">Flagship case study</p>
+      <h2>Agents with guardrails, not just prompts.</h2>
+      <p class="sub">Human-in-the-loop architecture: the agents do the legwork, and people hold every approval that matters.</p>
     </div>
     <div class="grid c3">
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Scoped access</h3>
-        <p data-b="type">Access limits live in each agent's tool definition. Seven of eleven agents can't reach an external system, whatever they're asked.</p>
+      <div class="cell">
+        <h3>Scoped access</h3>
+        <p>Access limits live in each agent's tool definition. Seven of eleven agents can't reach an external system, whatever they're asked.</p>
       </div>
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Read-only scoping</h3>
-        <p data-b="type">One agent turns a work item into a brief on a budget of roughly 10–12K tokens, and halts rather than inventing missing scope.</p>
+      <div class="cell">
+        <h3>Read-only scoping</h3>
+        <p>One agent turns a work item into a brief on a budget of roughly 10–12K tokens, and halts rather than inventing missing scope.</p>
       </div>
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Draft pull requests only</h3>
-        <p data-b="type">Descriptions come from the real diff and commit log, not the brief. Auto-complete is forbidden by design.</p>
+      <div class="cell">
+        <h3>Draft pull requests only</h3>
+        <p>Descriptions come from the real diff and commit log, not the brief. Auto-complete is forbidden by design.</p>
       </div>
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Three-link completion</h3>
-        <p data-b="type">Nothing closes without a completed pull request, a passing test run and a documentation file that exists.</p>
+      <div class="cell">
+        <h3>Three-link completion</h3>
+        <p>Nothing closes without a completed pull request, a passing test run and a documentation file that exists.</p>
       </div>
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Human approval gates</h3>
-        <p data-b="type">Brief review, implementation, code review and merge. Merges, deploys and production migrations stay permanently human.</p>
+      <div class="cell">
+        <h3>Human approval gates</h3>
+        <p>Brief review, implementation, code review and merge. Merges, deploys and production migrations stay permanently human.</p>
       </div>
-      <div class="cell" data-b="box">
-        <h3 data-b="type">Coordination through files</h3>
-        <p data-b="type">Agents can't spawn or call each other. Everything passes through files on disk, so the audit trail stays readable.</p>
+      <div class="cell">
+        <h3>Coordination through files</h3>
+        <p>Agents can't spawn or call each other. Everything passes through files on disk, so the audit trail stays readable.</p>
       </div>
     </div>
   </div>
@@ -134,68 +135,68 @@
 <section class="sec" id="process">
   <div class="wrap split">
     <div>
-      <p class="eyebrow" data-b="type">How it runs</p>
-      <h2 data-b="type">From vague idea to reviewed code.</h2>
+      <p class="eyebrow">How it runs</p>
+      <h2>From vague idea to reviewed code.</h2>
       <div class="steps">
-        <div class="step"><span class="n" data-b="type">01</span><div><h3 data-b="type">Scope</h3><p data-b="type">A one-question-at-a-time interview turns an idea into a work item and child tasks. A read-only agent turns that into a brief.</p></div></div>
-        <div class="step"><span class="n" data-b="type">02</span><div><h3 data-b="type">Build</h3><p data-b="type">Backend and frontend agents implement the brief. A reviewer checks it. Documentation and tests follow. A human approves each gate.</p></div></div>
-        <div class="step"><span class="n" data-b="type">03</span><div><h3 data-b="type">Ship</h3><p data-b="type">A draft pull request is opened, a teammate reviews and merges, and the tracker closes only when it can prove the work is done.</p></div></div>
+        <div class="step"><span class="n">01</span><div><h3>Scope</h3><p>A one-question-at-a-time interview turns an idea into a work item and child tasks. A read-only agent turns that into a brief.</p></div></div>
+        <div class="step"><span class="n">02</span><div><h3>Build</h3><p>Backend and frontend agents implement the brief. A reviewer checks it. Documentation and tests follow. A human approves each gate.</p></div></div>
+        <div class="step"><span class="n">03</span><div><h3>Ship</h3><p>A draft pull request is opened, a teammate reviews and merges, and the tracker closes only when it can prove the work is done.</p></div></div>
       </div>
     </div>
     <div>
-      <div class="term" data-b="box">
-        <div class="bar" data-b="fade" data-quiet><i></i><i></i><i></i><em>illustrative</em></div>
-<pre><span class="ln cm" data-b="type"># illustrative sketch of the rule</span>
-<span class="ln k" data-b="type">close_work_item:</span>
-<span class="ln k" data-b="type">  requires:</span>
-<span class="ln ok" data-b="type">    - pull_request: completed</span>
-<span class="ln ok" data-b="type">    - test_run: passing</span>
-<span class="ln ok" data-b="type">    - documentation: file_exists</span>
-<span class="ln k" data-b="type">  rejects:</span>
-<span class="ln no" data-b="type">    - handoff_notes   # WIP is not evidence</span>
-<span class="ln k" data-b="type">  order:</span>
-<span class="ln v" data-b="type">    1. transition_state</span>
-<span class="ln v" data-b="type">    2. post_comment</span>
-<span class="ln k" data-b="type">  can_reopen: false</span>
-<span class="ln k" data-b="type">  can_close_parent: false</span></pre>
+      <div class="term">
+        <div class="bar"><i></i><i></i><i></i><em>illustrative</em></div>
+<pre><span class="ln cm"># illustrative sketch of the rule</span>
+<span class="ln k">close_work_item:</span>
+<span class="ln k">  requires:</span>
+<span class="ln ok">    - pull_request: completed</span>
+<span class="ln ok">    - test_run: passing</span>
+<span class="ln ok">    - documentation: file_exists</span>
+<span class="ln k">  rejects:</span>
+<span class="ln no">    - handoff_notes   # WIP is not evidence</span>
+<span class="ln k">  order:</span>
+<span class="ln v">    1. transition_state</span>
+<span class="ln v">    2. post_comment</span>
+<span class="ln k">  can_reopen: false</span>
+<span class="ln k">  can_close_parent: false</span></pre>
       </div>
-      <p class="note" data-b="type">Illustrative only. The real system is employer-internal.</p>
+      <p class="note">Illustrative only. The real system is employer-internal.</p>
     </div>
   </div>
-  <svg class="plane p4" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
 </section>
 
 <section class="sec" id="work">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow" data-b="type">Selected work</p>
-      <h2 data-b="type">Case studies.</h2>
-      <p class="sub" data-b="type">Each one reads on its own, with or without a public repo behind it.</p>
+      <p class="eyebrow">Selected work</p>
+      <h2>Case studies.</h2>
+      <p class="sub">Each one reads on its own, with or without a public repo behind it.</p>
     </div>
     <div class="grid c2">
-      <a class="cell" data-b="box" href="work/agent-system/">
-        <span class="tag" data-b="type">Flagship case study</span>
-        <h3 data-b="type">A multi-agent engineering system, shipped to a team</h3>
-        <p data-b="type">Eleven specialised agents that carry work from a vague idea to a draft pull request, with access limits enforced in the tool layer and a human on every merge.</p>
-        <span class="more" data-b="fade">Read the case study →</span>
+      <a class="cell" href="work/agent-system/">
+        <span class="tag">Flagship case study</span>
+        <h3>A multi-agent engineering system, shipped to a team</h3>
+        <p>Eleven specialised agents that carry work from a vague idea to a draft pull request, with access limits enforced in the tool layer and a human on every merge.</p>
+        <span class="more">Read the case study →</span>
       </a>
-      <a class="cell" data-b="box" href="work/recruitment-workflow-engine/">
-        <span class="tag" data-b="type">Production system</span>
-        <h3 data-b="type">A workflow engine for recruitment and onboarding</h3>
-        <p data-b="type">Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.</p>
-        <span class="more" data-b="fade">Read the case study →</span>
+      <a class="cell" href="work/recruitment-workflow-engine/">
+        <span class="tag">Production system</span>
+        <h3>A task-workflow engine for recruitment and onboarding</h3>
+        <p>How a reusable workflow template becomes a live run, with ordered tasks, a full task state machine, and tokenised links that let outside vendors act without a login.</p>
+        <span class="more">Read the case study →</span>
       </a>
-      <a class="cell" data-b="box" href="work/whatsapp-employee-services/">
-        <span class="tag" data-b="type">Production system</span>
-        <h3 data-b="type">WhatsApp payroll and employee services</h3>
-        <p data-b="type">Employees request payslips, leave information and IRP5 documents over WhatsApp, backed by Meta's platform and Sage payroll data.</p>
-        <span class="more" data-b="fade">Read the case study →</span>
+      <a class="cell" href="work/whatsapp-employee-services/">
+        <span class="tag">Production system</span>
+        <h3>WhatsApp payroll and employee services</h3>
+        <p>Employees request payslips, leave information and IRP5 documents over WhatsApp, backed by Meta's platform and Sage payroll data.</p>
+        <span class="more">Read the case study →</span>
       </a>
-      <a class="cell" data-b="box" href="work/agentic-ai-training/">
-        <span class="tag" data-b="type">Training</span>
-        <h3 data-b="type">Agentic AI training for non-technical teams</h3>
-        <p data-b="type">Internal training that translated agentic workflows and prompt engineering into practical applications for each department.</p>
-        <span class="more" data-b="fade">Read the case study →</span>
+      <a class="cell" href="work/agentic-ai-training/">
+        <span class="tag">Training</span>
+        <h3>Teaching teams to build their own AI teacher</h3>
+        <p>Internal training that turned agentic workflows and prompt engineering into practical tools for non-technical departments, centred on a Socratic teacher with a syllabus and a grading rubric.</p>
+        <span class="more">Read the case study →</span>
       </a>
     </div>
   </div>
@@ -203,26 +204,47 @@
 
 <section class="sec">
   <div class="wrap">
-    <p class="eyebrow" data-b="type">Day-to-day stack</p>
-    <div class="chips">
-      <span class="chip" data-b="fade" data-quiet>C# / .NET</span>
-      <span class="chip" data-b="fade" data-quiet>React / TypeScript</span>
-      <span class="chip" data-b="fade" data-quiet>SQL Server</span>
-      <span class="chip" data-b="fade" data-quiet>Azure DevOps</span>
-      <span class="chip" data-b="fade" data-quiet>Application Insights</span>
-      <span class="chip" data-b="fade" data-quiet>Model Context Protocol</span>
-      <span class="chip" data-b="fade" data-quiet>n8n</span>
+    <div class="head">
+      <p class="eyebrow">Day-to-day stack</p>
+      <h2>What I build with.</h2>
+      <p class="sub">Full-stack engineering underneath, AI and automation on top.</p>
+    </div>
+    <div class="grid c3 stack">
+      <div class="cell">
+        <h3>Backend</h3>
+        <div class="chips"><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">Entity Framework</span><span class="chip">REST APIs</span><span class="chip">Webhooks</span></div>
+      </div>
+      <div class="cell">
+        <h3>Frontend</h3>
+        <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">HTML / CSS</span></div>
+      </div>
+      <div class="cell">
+        <h3>Data</h3>
+        <div class="chips"><span class="chip">SQL Server</span><span class="chip">EF migrations</span><span class="chip">Schema design</span></div>
+      </div>
+      <div class="cell">
+        <h3>AI &amp; agents</h3>
+        <div class="chips"><span class="chip">Claude</span><span class="chip">Model Context Protocol</span><span class="chip">Agentic workflows</span><span class="chip">Prompt engineering</span><span class="chip">LLM scoring pipelines</span></div>
+      </div>
+      <div class="cell">
+        <h3>Automation &amp; integrations</h3>
+        <div class="chips"><span class="chip">n8n</span><span class="chip">Meta WhatsApp platform</span><span class="chip">Sage 300</span><span class="chip">Sage VIP</span><span class="chip">LinkedIn</span><span class="chip">Careers24</span></div>
+      </div>
+      <div class="cell">
+        <h3>Delivery &amp; ops</h3>
+        <div class="chips"><span class="chip">Azure DevOps</span><span class="chip">Application Insights</span><span class="chip">Deployment pipelines</span><span class="chip">Git &amp; pull requests</span><span class="chip">Self-hosted build agent</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sec cta" id="contact">
-  <svg class="plane p5" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
   <div class="wrap">
-    <h2 data-b="type">Have something that needs automating?</h2>
-    <p class="sub" data-b="type">I'm open to remote AI automation, integration and implementation roles. Based in South Africa.</p>
-    <div class="actions" data-b="fade">
-      <a class="pill" href="mailto:samuel.ki8492@gmail.com">samuel.ki8492@gmail.com</a>
+    <h2>Want to talk about this work?</h2>
+    <p class="sub">Agent systems, workflow automation, or putting AI to work inside a delivery team: I'm always glad to compare notes.</p>
+    <div class="actions">
+      <a class="pill" href="mailto:samuelkaye92@gmail.com">samuelkaye92@gmail.com</a>
       <a class="pill ghost" href="https://www.linkedin.com/in/samuel-kalongo-777623247/">LinkedIn</a>
       <a class="pill ghost" href="https://github.com/Sammy-Kaye">GitHub</a>
     </div>
@@ -233,6 +255,8 @@
 
 <footer class="foot"><div class="wrap"><span>© Samuel Kalongo</span><span>Johannesburg, South Africa</span></div></footer>
 
-<script src="fx.js"></script>
+<script src="tooltip.js"></script>
+<script src="fx-edit.js"></script>
+<script src="agents.js"></script>
 </body>
 </html>
