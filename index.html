@@ -11,10 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
-  // Progressive: no JS, reduced motion, or ?nofx all get the plain page with no intro.
+  // Agents run by default. A visitor can pause them (footer toggle) or add ?nofx. If the device asks for
+  // reduced motion we still show the agents, in a calmer form (no spinning intro, no card dragging).
   (function () {
-    var r = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!r && !/[?&]nofx/.test(location.search)) document.documentElement.classList.add('intro');
+    var d = document.documentElement, paused = false;
+    try { paused = localStorage.getItem('agents-paused') === '1'; } catch (e) {}
+    var off = paused || /[?&]nofx/.test(location.search);
+    var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (off) d.classList.add('agents-off');
+    if (calm) d.classList.add('calm');
+    if (!off && !calm) d.classList.add('intro');
     // Failsafe: the intro must never trap a visitor, even if another script fails to load or throws.
     setTimeout(function () { var i = document.getElementById('intro'); if (i) i.parentNode.removeChild(i); }, 4500);
   })();
@@ -257,7 +263,7 @@
 
 </main>
 
-<footer class="foot"><div class="wrap"><span>© Samuel Kalongo</span><span>Johannesburg, South Africa</span></div></footer>
+<footer class="foot"><div class="wrap"><span>© Samuel Kalongo</span><span>Johannesburg, South Africa</span><button type="button" class="linkbtn" id="motion-toggle"></button></div></footer>
 
 <script src="tooltip.js"></script>
 <script src="fx-edit.js"></script>

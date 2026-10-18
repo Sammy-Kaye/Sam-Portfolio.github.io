@@ -3,6 +3,19 @@
    cursor trails your mouse and types out a plain-language explanation.
    Touch devices: tap the term instead.                                      */
 (function () {
+  var root = document.documentElement;
+  var toggle = document.getElementById('motion-toggle');
+  if (toggle) {
+    var off = root.classList.contains('agents-off');
+    toggle.textContent = off ? 'Agent animations paused. Resume' : 'Pause agent animations';
+    toggle.addEventListener('click', function () {
+      try { localStorage.setItem('agents-paused', off ? '0' : '1'); } catch (e) {}
+      location.href = location.pathname; // reload without any ?nofx
+    });
+  }
+  if (root.classList.contains('agents-off')) {
+    // paused: still label the jargon so the plain page keeps its tooltips' text available
+  }
   var data = document.getElementById('glossary');
   if (!data) return;
   var gloss;
@@ -19,7 +32,7 @@
     }
   });
 
-  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (root.classList.contains('agents-off')) return;
   var layer = document.getElementById('cursors');
   if (!layer) return;
 

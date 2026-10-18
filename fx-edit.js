@@ -8,7 +8,7 @@
   var isCase = !!document.querySelector('.case');
   var art = document.querySelector('.case') || document.querySelector('main');
   if (!art) return;
-  if ((window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || /[?&]nofx/.test(location.search)) return;
+  if (document.documentElement.classList.contains('agents-off')) return;
 
   var AG = [['Proofreader Agent', '#3b82f6'], ['Copywriter Agent', '#10b981'], ['Editor Agent', '#f59e0b'],
             ['Stylist Agent', '#8b5cf6'], ['Reviewer Agent', '#ec4899'], ['Fact-checker Agent', '#eab308']];

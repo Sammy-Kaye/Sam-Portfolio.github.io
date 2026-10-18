@@ -2,7 +2,7 @@
    Retitle Agent   goes back over the headline and keeps trying other job titles.
    Arrange Agent   drags the stack cards around like a carousel, one drag-and-drop at a time. */
 (function () {
-  if ((window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || /[?&]nofx/.test(location.search)) return;
+  if (document.documentElement.classList.contains('agents-off')) return;
   var layer = document.getElementById('cursors');
   if (!layer) return;
 
@@ -44,7 +44,7 @@
     function target() {
       var r = h1.getBoundingClientRect(), t = Date.now() / 1000;
       if (mode === 'edit') { var m = marker.getBoundingClientRect(); return { x: m.right, y: m.top + m.height * .12 }; }
-      return { x: r.right - Math.min(r.width * .18, 120) + Math.sin(t * 1.3) * 10, y: r.bottom + 6 + Math.cos(t * 1.7) * 6 };
+      return { x: Math.min(r.right - Math.min(r.width * .18, 120) + Math.sin(t * 1.3) * 10, window.innerWidth - 150), y: r.bottom + 6 + Math.cos(t * 1.7) * 6 }; // keep the label on screen
     }
     function tick() {
       var on = inView() && built();
@@ -93,7 +93,7 @@
 
   /* ---------- Arrange: drag-and-drop carousel ---------- */
   var deck = document.querySelector('.stack');
-  if (deck && window.innerWidth > 600) (function () {
+  if (deck) (function () {
     var cur = mkCursor('Arrange Agent', '#8b5cf6');
     var inView = watch(deck);
     var pos = { x: -60, y: 400 }, want = null, grabbing = false;

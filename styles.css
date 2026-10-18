@@ -205,3 +205,17 @@ h2[data-tip], h3[data-tip] { text-decoration: underline dotted rgba(11, 11, 12, 
 .intro #intro { animation: introOut .5s ease 2.8s forwards; }
 @keyframes introOut { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 #intro { pointer-events: none; }
+
+@media (max-width: 900px) { .stack { grid-auto-rows: auto; } }
+
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.linkbtn:hover { color: var(--ink); }
+
+/* the stack stays a 2-column grid on phones so the Arrange agent has a short drag */
+@media (max-width: 600px) {
+  .grid.stack { --cols: 2; }
+  .stack .cell { padding: 18px 14px 20px; }
+  .stack .cell h3 { font-size: 16px; margin-bottom: 8px; }
+  .stack .chips { gap: 6px; margin-top: 10px; }
+  .stack .chip { font-size: 11px; padding: 5px 9px; }
+}
