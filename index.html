@@ -1,685 +1,238 @@
-<!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Samuel Kalongo Portfolio</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samuel Kalongo — Automation &amp; AI Integration Developer</title>
+<meta name="description" content="Automation &amp; AI Integration Developer. Production AI workflows, integrations and agent systems, built on a full-stack C#/.NET and React/TypeScript background.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0c'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='14' text-anchor='middle' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // The build-in-real-time effect is progressive: no JS, reduced motion, or ?nofx all get the plain finished page.
+  (function () {
+    var r = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!r && !/[?&]nofx/.test(location.search)) document.documentElement.classList.add('fx');
+  })();
+</script>
 </head>
+<body>
 
-<body id="top">
+<div id="intro" aria-hidden="true"><div class="ring"></div><div class="mark">SK</div></div>
+<div class="rulers" aria-hidden="true"><i class="rx"></i><i class="ry"></i></div>
+<i class="guide gx" aria-hidden="true"></i><i class="guide gy" aria-hidden="true"></i>
+<div id="cursors" aria-hidden="true"></div>
 
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark">SK</span>Samuel Kalongo</a>
+    <ul>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#system">Agent system</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="pill" href="work/agent-system/">Read the case study</a>
+  </div>
+</header>
 
-    <!-- # preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-        </div>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow" data-b="type" data-intro>Samuel Kalongo · Johannesburg, South Africa</p>
+    <h1 data-b="type" data-intro>Automation that holds up in production.</h1>
+    <p class="lede" data-b="type" data-intro>I'm an Automation &amp; AI Integration Developer. I build AI-powered workflows, integrations and business systems with APIs, LLMs and workflow platforms, on top of a full-stack background in C#/.NET and React/TypeScript.</p>
+    <div class="actions" data-b="fade" data-intro>
+      <a class="pill" href="work/agent-system/">Read the case study</a>
+      <a class="pill ghost" href="#contact">Get in touch</a>
     </div>
-
-
-    <!-- # page wrap
-    ================================================== -->
-    <div class="s-pagewrap">
-
-        <div class="circles">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-
-        <!-- ## site header 
-        ================================================== -->
-        <header class="s-header">
-
-            <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Samuel.K</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
-            </div>
-
-            <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav">
-                    <ul>
-                        <li><a href="index.html" class="home-link">Samuel.K</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Projects</a></li>
-                        <li><a href="#contact" class="smoothscroll">Conatct Me</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </header> <!-- end s-header -->
-
-
-        <!-- ## main content
-        ==================================================- -->
-        <main class="s-content">
-
-
-            <!-- ### intro
-            ================================================== -->
-            <section id="intro" class="s-intro target-section">
-
-                <div class="row intro-content wide">
-
-                    <div class="column">
-                        <div class="text-pretitle with-line">
-                            Hello World
-                        </div>
-
-                        <h1 class="text-huge-title">
-                            I am Samuel, <br>
-                            a UI/UX designer <br>
-                            & frontend <br> 
-                            developer based <br>
-                            in South Africa.
-                        </h1>
-                    </div>
-
-                    <ul class="intro-social">
-                        <li><a href="https://www.linkedin.com/in/samuel-kalongo-777623247/">Linkedin</a></li>
-                        <li><a href="https://x.com/Wegendare">Twitter</a></li>
-                        <li><a href="https://www.instagram.com/ssaint_llegend_/#">Instagram</a></li>
-                        <li><a href="https://github.com/Sammy-Kaye">Github</a></li>
-                    </ul>
-
-                </div> <!-- end intro content -->
-
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
-                </a>
-
-            </section> <!-- end s-intro -->
-
-
-            <!-- ### about
-            ================================================== -->
-            <section id="about" class="s-about target-section">
-
-
-                <div class="row about-info wide" data-animate-block>
-
-                    <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo.jpg" 
-                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el>
-                    </div>
-
-                    <div class="column lg-6 md-12">
-                        <div class="about-info__text" >
-
-                            <h2 class="text-pretitle with-line" data-animate-el>
-                                About Me
-                            </h2>
-                            <p class="attention-getter" data-animate-el>
-                                Hi, I'm Samuel Kalongo, a passionate front-end web developer with a strong foundation in UI/UX design. I specialize in crafting clean, responsive, and visually engaging websites that deliver exceptional user experiences.
-                                My journey in tech began with a deep curiosity about how users interact with digital platforms. This led me to study UI/UX design, where I honed my skills in user research and prototyping. Over the years, I've developed 
-                                expertise in HTML, CSS, and JavaScript, enabling me to seamlessly translate designs into functional, interactive web experiences.
-
-                            </p>
-                            <a href="Samuel Kalongo CV.pdf" class="btn btn--medium u-fullwidth" download="Samuel Kalongo CV.pdf">Download CV</a>
-
-
-                        </div>
-                    </div>
-                </div> <!-- about-info -->
-
-
-                <div class="row about-expertise" data-animate-block>
-                    <div class="column lg-12">
-
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
-
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>Frontend Web Development</li>
-                            <li>UI/UX Design</li>
-                            <li>E-Commerce</li>
-                            <li>Prototyping</li>
-                            <li>Problem-Solving</li>
-                        </ul>
-                        <p>I specialize in front-end development, crafting responsive and dynamic web interfaces using HTML, CSS and JavaScript. My UI/UX design expertise enables me to create intuitive user experiences through wireframing, prototyping, and usability testing.
-                           My technical proficiencies extend to WordPress, API integration, and various front-end libraries, ensuring optimal site performance. I've developed comprehensive e-commerce solutions featuring product filtering, shopping carts, and secure checkout systems, while leveraging digital marketing strategies to enhance user engagement.
-                           With strong problem-solving skills, I thrive in collaborative environments, working effectively with designers, developers, and stakeholders to transform concepts into exceptional digital experiences.</p>
-
-                    </div>
-                </div> <!-- end about-expertise -->
-
-
-                <div class="row about-timelines" data-animate-block>
-
-                    <div class="column lg-6 tab-12">
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Education
-                        </h2>
-
-                        <div class="timeline" data-animate-el>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">FET Certificate: Systems Development
-                                        </h3>
-                                    <h5 class="timeline__meta">CTU Training Solutions</h5>
-                                    <p class="timeline__timeframe">July 2022 - June 2023 </p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Provides foundational knowledge in software development, including programming, database management, and system analysis. Equips learners with essential skills for building and maintaining IT systems.</p>
-                                </div>
-                            </div>
-    
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">National Certificate: IT Systems Development
-                                        </h4>
-                                    <h5 class="timeline__meta">CTU Training Solutions</h5>
-                                    <p class="timeline__timeframe">January 2024 - December 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Covers advanced concepts in software development, including programming, database design, system analysis, and application development. Prepares learners for professional roles in IT system design and implementation.</p>
-                                </div>
-                            </div>
-    
-                        </div> <!-- end timeline -->
-
-                    </div> <!-- end column -->
-
-                    <div class="column lg-6 tab-12">
-
-                        
-
-                        <div class="timeline" data-animate-el>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Meta Certified Digital Marketing Associate</h3>
-                                    <h5 class="timeline__meta">Meta</h5>
-                                    <p class="timeline__timeframe">November 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Demonstrates proficiency in core digital marketing concepts, including ad creation, campaign management, audience targeting, and performance analytics within Meta’s advertising ecosystem.</p>
-                                </div>
-                            </div>
-    
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">The Complete Full-Stack Web Development Bootcamp</h4>
-                                    <h5 class="timeline__meta">Udemy</h5>
-                                    <p class="timeline__timeframe">2025-Present</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Covers front-end and back-end development, including HTML, CSS, JavaScript, Node.js, React, MongoDB, and APIs. Focuses on building dynamic, responsive web applications with real-world projects.</p>
-                                </div>
-                            </div>
-    
-                        </div> <!-- end timeline -->
-                        
-                    </div> <!-- end column -->
-
-
-                </div> <!-- end about-timelines -->
-
-            </section> <!-- end s-about -->
-
-            <!-- ### SkillSet
-             ==================================================-->
-             <section class="s-skillset" id="skillset">
-                <div class="container">
-                    <div class="row">
-                        <div class="column lg-12 tab-12">
-                            <h2 class="s-skillset__title">Skill Sets</h2>
-                            <p class="s-skillset__description">A list of skills I have acquired
-                            <ul class="skill-bars">
-                                <li>
-                                <div class="progress percent90"><span>90%</span></div>
-                                <strong>HTML</strong>
-                                </li>
-                                <li>
-                                <div class="progress percent85"><span>85%</span></div>
-                                <strong>CSS</strong>
-                                </li>
-                                <li>
-                                <div class="progress percent70"><span>70%</span></div>
-                                <strong>Javascript</strong>
-                                </li>
-                                <li>
-                                <div class="progress percent70"><span>70%</span></div>
-                                <strong>PHP</strong>
-                                </li>
-                                <li>
-                                <div class="progress percent65"><span>65%</span></div>
-                                <strong>Figma</strong>
-                                </li>
-                                
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-             </section>
-
-
-            <!-- ### works
-            ================================================== -->
-            <section id="works" class="s-works target-section">
-
-
-                <div class="row works-portfolio">
-
-                    <div class="column lg-12" data-animate-block>
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Recent Works
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            Here are some of my projects I have done. Feel free to check them out.
-                        </p>
-    
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/Heckers.jpg"
-                                             srcset="images/portfolio/Heckers.jpg, images/portfolio/Heckers@2x.jpg"  alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Simple E-commerce website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Heckers Garden.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/Diablo.jpg" 
-                                             srcset="images/portfolio/Diablo.jpg 1x, images/portfolio/Diablo.jpg" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Custom Theme Static Website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Diablo IV
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/weather.jpg" 
-                                             srcset="images/portfolio/weather.jpg 1x, images/portfolio/weather@2x.jpg 2x" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Weather Website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            WeatherVista.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/2048.jpg"
-                                             srcset="images/portfolio/2048.jpg 1x, images/portfolio/2048@2x.jpg 2x" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            2048 game website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            2048 Game 
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src= "images/portfolio/underconstruction.png"
-                                             srcset="images/portfolio/underconstruction.png 1x, images/portfolio/underconstruction@2x.png 2x" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Project Under Construction
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Coming Soon.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/underconstruction.png" 
-                                             srcset="images/portfolio/underconstruction.png 1x, images/portfolio/underconstruction@2x.png 2x" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Project Under Construction
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Coming Soon.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                        </ul> <!-- end folio-list -->
-
-                    </div> <!-- end column -->
-
-
-                    <!-- Modal popups
-                    -------------------------------------------- -->
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/Heckers.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>E-commerce Website (Work in Progess...)</h5>
-                                <p>Built e-commerce websites using PHP and sql, customizing themes to meet client requirements. Implemented product filtering, search function, shopping cart functionality, and payment processing.</p>
-                                <ul class="modal-popup__cat">
-                                <li>PHP, HTML, CSS, JavaScript, SQL, Responsive Design</li>
-                                </ul>
-                            </div>
-
-                            <a href="http://demolive.wuaze.com/index.php?i=1" class="modal-popup__details">Project link</a>              
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/Diablo.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Custom Theme Static Website</h5>
-                                <p>Designed and developed custom themed static site based on Diablo VI with responsive layouts, optimized for performance and SEO best practices.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>PHP, HTML, CSS, JavaScript, Responsive Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://sammy-kaye.github.io/DiabloStyle.io/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/weather.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>WeatherVista</h5>
-                                <p>A weather website that displays current weather conditions and forecasts using OpenWeatherMap API.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>HTML, CSS, JavaScript, API Calls, Responsive Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://sammy-kaye.github.io/WeatherVista.io/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/2048.png" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>2048 Game</h5>
-                                <p>Developed a 2048 game using HTML, CSS, and JavaScript, PHP and SQL for score keeping and game logic.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>HTML, CSS, JavaScript, PHP, SQL</li>
-                                </ul>
-                            </div>
-                
-                            <a href="http://www.2048-game.infinityfreeapp.com/index.php" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-
-                            <img src="images/portfolio/underconstruction.png" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Project Under Construction</h5>
-                                <p>Project is currently under construction and will be available soon.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Illustration</li>
-                                </ul>
-                            </div>
-                
-                            <a href="#" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/underconstruction.png" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Project Under Construction</h5>
-                                <p>Project is currently under construction and will be available soon.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="#" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                </div> <!-- end works-portfolio -->
-
-
-                <div class="row testimonials">
-                    <div class="column lg-12" data-animate-block>
-        
-                        <div class="swiper-container testimonial-slider" data-animate-el>
-        
-                            <div class="swiper-wrapper">
-
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Frank Chimero</strong>
-                                            <span>Designer</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        "People ignore design that ignores people."
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-                
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Dr. Christopher Dayagdag</strong>
-                                            <span>CEO of Marketlink Web Solutions</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        "To become successful online, you only need to remember the following : Good Heart + Passion + Web Design + SEO + Digital Marketing + Dedication + Positiveness + Patience = Success"
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-                
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Marc Andreessen</strong>
-                                            <span>General partner of Andreessen Horowitz
-                                            </span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        "People tend to think of the web as a way to get information or perhaps as a place to carry out ecommerce. But really, the web is about accessing applications. Think of each website as an application, and every single click, every single interaction with that site, is an opportunity to be on the very latest version of that application."
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-        
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Steve Krug</strong>
-                                            <span>Usability/UX consultant Steve Krug</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        "If there’s one thing you learn by working on a lot of different Web sites, it’s that almost any design idea–no matter how appallingly bad–can be made usable in the right circumstances, with enough effort."
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-            
-                            </div> <!-- end swiper-wrapper -->
-        
-                            <div class="swiper-pagination"></div>
-        
-                        </div> <!-- end swiper-container -->
-        
-                    </div> <!-- end column -->
-                </div> <!-- end row testimonials -->
-
-            </section> <!-- end s-works -->
-
-
-            <!-- ### contact
-            ================================================== -->
-            <section id="contact" class="s-contact target-section">
-
-                <div class="row contact-top">
-                    <div class="column lg-12">
-                        <h2 class="text-pretitle">
-                            Get In Touch
-                        </h2>
-
-                        <p class="h1">
-                            I love to hear from you.
-                            Whether you have a question or just 
-                            want to chat about design, tech feel free to massage me
-                        </p>
-                    </div>
-                </div> <!-- end contact-top -->
-
-                <div class="row contact-bottom">
-                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Reach me at</h3>
-                        <p class="contact-links">
-                            <a href="mailto:samuelkaye92@gmail.com" class="mailtoui">samuelkaye92@gmail.com</a> <br>
-                            <a href="tel:+27760486293">+27 76 048 6293</a>
-                        </p>
-                    </div>
-                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Social</h3>
-                        <ul class="contact-social">
-                            <li><a href="https://github.com/Sammy-Kaye">Github</a></li>
-                            <li><a href="https://www.linkedin.com/in/samuel-kalongo-777623247/">LinkedIn</a></li>
-                            <li><a href="https://x.com/Wegendare">Twitter</a></li>
-                            <li><a href="https://www.instagram.com/ssaint_llegend_/#">Instagram</a></li>
-                        </ul>
-                    </div>
-                    <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:samuelkaye92@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
-                    </div>
-                </div> <!-- end contact-bottom -->
-
-            </section> <!-- end contact -->
-
-        </main> <!-- end s-content -->
-
-
-        <!-- ## footer
-        ================================================== -->
-        <footer class="s-footer">
-
-            <div class="row">
-                <div class="column ss-copyright">
-                    <span>© Copyright Samuel.Kalongo 2024</span> 
-                
-                </div>
-
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-        </footer> <!-- end s-footer -->
-
-    </div> <!-- end -s-pagewrap -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    <p class="now" data-b="type" data-intro>Currently building production AI tooling at Genghis Technology.</p>
+  </div>
+  <svg class="plane p1" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <svg class="plane p2" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+</section>
+
+<section class="sec" style="padding:0;border-top:0">
+  <div class="wrap"><div class="grid c4 stats">
+    <div class="cell" data-b="box"><span class="num" data-b="type">11</span><p data-b="type">specialised agents in one engineering system</p></div>
+    <div class="cell" data-b="box"><span class="num" data-b="type">4</span><p data-b="type">of them hold any external access. The other seven physically cannot.</p></div>
+    <div class="cell" data-b="box"><span class="num" data-b="type">15</span><p data-b="type">reusable engineering skills packaged with the system</p></div>
+    <div class="cell" data-b="box"><span class="num" data-b="type">~10</span><p data-b="type">minutes to onboard a new developer</p></div>
+  </div></div>
+</section>
+
+<section class="sec" id="stories">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" data-b="type">The evidence</p>
+      <h2 data-b="type">Three kinds of proof.</h2>
+      <p class="sub" data-b="type">Different roles buy different things. Start with whichever one matches yours.</p>
+    </div>
+    <div class="grid c3">
+      <a class="cell" data-b="box" href="work/agent-system/">
+        <span class="tag" data-b="type">The builder</span>
+        <h3 data-b="type">I design agent systems and ship them to a team.</h3>
+        <p data-b="type">A multi-agent engineering system now in my team's daily delivery workflow, run by two colleagues besides me.</p>
+        <span class="more" data-b="fade">Read the case study →</span>
+      </a>
+      <a class="cell" data-b="box" href="work/agentic-ai-training/">
+        <span class="tag" data-b="type">The translator</span>
+        <h3 data-b="type">I make agentic AI usable for non-engineers.</h3>
+        <p data-b="type">Internal training that turned agentic workflows and prompt engineering into practical, department-level applications.</p>
+        <span class="more" data-b="fade">Read more →</span>
+      </a>
+      <a class="cell" data-b="box" href="#work">
+        <span class="tag" data-b="type">The shipper</span>
+        <h3 data-b="type">I run production systems, not just demos.</h3>
+        <p data-b="type">A recruitment platform and a WhatsApp payroll service, built end to end in a three-person team and owned through incidents.</p>
+        <span class="more" data-b="fade">See the work →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="system">
+  <svg class="plane p3" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" data-b="type">Flagship case study</p>
+      <h2 data-b="type">Agents with guardrails, not just prompts.</h2>
+      <p class="sub" data-b="type">The interesting part isn't the number of agents. It's what each one is, and isn't, allowed to do.</p>
+    </div>
+    <div class="grid c3">
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Scoped access</h3>
+        <p data-b="type">Access limits live in each agent's tool definition. Seven of eleven agents can't reach an external system, whatever they're asked.</p>
+      </div>
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Read-only scoping</h3>
+        <p data-b="type">One agent turns a work item into a brief on a budget of roughly 10–12K tokens, and halts rather than inventing missing scope.</p>
+      </div>
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Draft pull requests only</h3>
+        <p data-b="type">Descriptions come from the real diff and commit log, not the brief. Auto-complete is forbidden by design.</p>
+      </div>
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Three-link completion</h3>
+        <p data-b="type">Nothing closes without a completed pull request, a passing test run and a documentation file that exists.</p>
+      </div>
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Human approval gates</h3>
+        <p data-b="type">Brief review, implementation, code review and merge. Merges, deploys and production migrations stay permanently human.</p>
+      </div>
+      <div class="cell" data-b="box">
+        <h3 data-b="type">Coordination through files</h3>
+        <p data-b="type">Agents can't spawn or call each other. Everything passes through files on disk, so the audit trail stays readable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow" data-b="type">How it runs</p>
+      <h2 data-b="type">From vague idea to reviewed code.</h2>
+      <div class="steps">
+        <div class="step"><span class="n" data-b="type">01</span><div><h3 data-b="type">Scope</h3><p data-b="type">A one-question-at-a-time interview turns an idea into a work item and child tasks. A read-only agent turns that into a brief.</p></div></div>
+        <div class="step"><span class="n" data-b="type">02</span><div><h3 data-b="type">Build</h3><p data-b="type">Backend and frontend agents implement the brief. A reviewer checks it. Documentation and tests follow. A human approves each gate.</p></div></div>
+        <div class="step"><span class="n" data-b="type">03</span><div><h3 data-b="type">Ship</h3><p data-b="type">A draft pull request is opened, a teammate reviews and merges, and the tracker closes only when it can prove the work is done.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="term" data-b="box">
+        <div class="bar" data-b="fade" data-quiet><i></i><i></i><i></i><em>illustrative</em></div>
+<pre><span class="ln cm" data-b="type"># illustrative sketch of the rule</span>
+<span class="ln k" data-b="type">close_work_item:</span>
+<span class="ln k" data-b="type">  requires:</span>
+<span class="ln ok" data-b="type">    - pull_request: completed</span>
+<span class="ln ok" data-b="type">    - test_run: passing</span>
+<span class="ln ok" data-b="type">    - documentation: file_exists</span>
+<span class="ln k" data-b="type">  rejects:</span>
+<span class="ln no" data-b="type">    - handoff_notes   # WIP is not evidence</span>
+<span class="ln k" data-b="type">  order:</span>
+<span class="ln v" data-b="type">    1. transition_state</span>
+<span class="ln v" data-b="type">    2. post_comment</span>
+<span class="ln k" data-b="type">  can_reopen: false</span>
+<span class="ln k" data-b="type">  can_close_parent: false</span></pre>
+      </div>
+      <p class="note" data-b="type">Illustrative only. The real system is employer-internal.</p>
+    </div>
+  </div>
+  <svg class="plane p4" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" data-b="type">Selected work</p>
+      <h2 data-b="type">Case studies.</h2>
+      <p class="sub" data-b="type">Each one reads on its own, with or without a public repo behind it.</p>
+    </div>
+    <div class="grid c2">
+      <a class="cell" data-b="box" href="work/agent-system/">
+        <span class="tag" data-b="type">Flagship case study</span>
+        <h3 data-b="type">A multi-agent engineering system, shipped to a team</h3>
+        <p data-b="type">Eleven specialised agents that carry work from a vague idea to a draft pull request, with access limits enforced in the tool layer and a human on every merge.</p>
+        <span class="more" data-b="fade">Read the case study →</span>
+      </a>
+      <a class="cell" data-b="box" href="work/recruitment-workflow-engine/">
+        <span class="tag" data-b="type">Production system</span>
+        <h3 data-b="type">A workflow engine for recruitment and onboarding</h3>
+        <p data-b="type">Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.</p>
+        <span class="more" data-b="fade">Read the case study →</span>
+      </a>
+      <a class="cell" data-b="box" href="work/whatsapp-employee-services/">
+        <span class="tag" data-b="type">Production system</span>
+        <h3 data-b="type">WhatsApp payroll and employee services</h3>
+        <p data-b="type">Employees request payslips, leave information and IRP5 documents over WhatsApp, backed by Meta's platform and Sage payroll data.</p>
+        <span class="more" data-b="fade">Read the case study →</span>
+      </a>
+      <a class="cell" data-b="box" href="work/agentic-ai-training/">
+        <span class="tag" data-b="type">Training</span>
+        <h3 data-b="type">Agentic AI training for non-technical teams</h3>
+        <p data-b="type">Internal training that translated agentic workflows and prompt engineering into practical applications for each department.</p>
+        <span class="more" data-b="fade">Read the case study →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow" data-b="type">Day-to-day stack</p>
+    <div class="chips">
+      <span class="chip" data-b="fade" data-quiet>C# / .NET</span>
+      <span class="chip" data-b="fade" data-quiet>React / TypeScript</span>
+      <span class="chip" data-b="fade" data-quiet>SQL Server</span>
+      <span class="chip" data-b="fade" data-quiet>Azure DevOps</span>
+      <span class="chip" data-b="fade" data-quiet>Application Insights</span>
+      <span class="chip" data-b="fade" data-quiet>Model Context Protocol</span>
+      <span class="chip" data-b="fade" data-quiet>n8n</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta" id="contact">
+  <svg class="plane p5" data-b="fade" data-quiet viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3l20 9L2 21l3-9z"/></svg>
+  <div class="wrap">
+    <h2 data-b="type">Have something that needs automating?</h2>
+    <p class="sub" data-b="type">I'm open to remote AI automation, integration and implementation roles. Based in South Africa.</p>
+    <div class="actions" data-b="fade">
+      <a class="pill" href="mailto:samuel.ki8492@gmail.com">samuel.ki8492@gmail.com</a>
+      <a class="pill ghost" href="https://www.linkedin.com/in/samuel-kalongo-777623247/">LinkedIn</a>
+      <a class="pill ghost" href="https://github.com/Sammy-Kaye">GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot"><div class="wrap"><span>© Samuel Kalongo</span><span>Johannesburg, South Africa</span></div></footer>
+
+<script src="fx.js"></script>
 </body>
 </html>

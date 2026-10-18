@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A workflow engine for recruitment and onboarding — Samuel Kalongo</title>
+<meta name="description" content="Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css"></head>
+<body>
+<header class="nav"><div class="wrap"><a class="brand" href="../../"><span class="mark">SK</span>Samuel Kalongo</a><a class="pill" href="../../#contact">Get in touch</a></div></header>
+<article class="case">
+<a class="back" href="../../#work">← All work</a>
+<h1>A workflow engine for recruitment and onboarding</h1>
+<p class="sub">Reusable workflow templates, a full task state machine, and tokenised links that let outside vendors complete tasks with no login.</p>
+<div class="meta"><span class="chip">C# / .NET</span><span class="chip">State machines</span><span class="chip">Integrations</span><span class="chip">AI scoring</span></div>
+<h2>Problem</h2>
+<p>Recruitment and onboarding work crosses people and systems: hiring managers, HR, and external vendors, with integrations to Sage 300, LinkedIn and Careers24. It needed to be modelled as real workflows with rules, not a checklist.</p>
+<h2>Process</h2>
+<p>Built end to end as part of a three-person team at Genghis Technology, including the workflow system and the employee onboarding flow.</p>
+<h2>Architecture</h2>
+<ul><li><strong>Templates are separate from runtime instances.</strong> A reusable workflow template describes the shape of the work; a live instance is what actually runs for one person.</li><li>Tasks carry assignment, ordering and due-date rules.</li></ul>
+<h2>Implementation</h2>
+<ul><li>A full <strong>task state machine</strong>: completion, decline, skip, expiry and reassignment.</li><li><strong>Token-based external completion.</strong> Vendors complete assigned tasks through secure, tokenised links, with no login and no account.</li><li><strong>Audit trails</strong> that record reassignment and ordering changes.</li><li>The employee onboarding flow, end to end, and a Sage VIP data export.</li><li>A <strong>two-stage AI CV-scoring evaluation</strong>: evidence is extracted first, then mapped against a rubric. Separating the stages keeps the scoring explainable.</li></ul>
+<h2>Reliability</h2>
+<p>Every task transition is an explicit state rather than an ad-hoc flag, external access is limited to a single task through a tokenised link, and changes to ownership and ordering are recorded.</p>
+<h2>Result</h2>
+<p>A workflow system delivered and run in production for a client environment, covering the lifecycle from recruitment through to onboarding and payroll-system export.</p>
+<p class="conf">Employer systems, repositories, work items and client names are deliberately left out. The mechanism is the point.</p>
+</article>
+</body></html>

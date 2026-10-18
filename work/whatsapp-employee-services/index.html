@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhatsApp payroll and employee services — Samuel Kalongo</title>
+<meta name="description" content="Employees request payslips, leave information and IRP5 documents over WhatsApp, backed by Meta's platform and Sage payroll data.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css"></head>
+<body>
+<header class="nav"><div class="wrap"><a class="brand" href="../../"><span class="mark">SK</span>Samuel Kalongo</a><a class="pill" href="../../#contact">Get in touch</a></div></header>
+<article class="case">
+<a class="back" href="../../#work">← All work</a>
+<h1>WhatsApp payroll and employee services</h1>
+<p class="sub">Employees request payslips, leave information and IRP5 documents over WhatsApp, backed by Meta's platform and Sage payroll data.</p>
+<div class="meta"><span class="chip">WhatsApp / Meta</span><span class="chip">Sage</span><span class="chip">Deployments</span><span class="chip">Incident response</span></div>
+<h2>Problem</h2>
+<p>Employees wanted payroll answers where they already are: WhatsApp. The service had to identify the right employee reliably and hand over sensitive documents such as payslips and IRP5s.</p>
+<h2>Process</h2>
+<p>Part of a three-person team at Genghis Technology. I took one client deployment through to production myself and then turned it into a repeatable procedure.</p>
+<h2>Architecture</h2>
+<p>Meta's WhatsApp platform on one side, Sage payroll data on the other, with a webhook-driven service between them.</p>
+<h2>Implementation</h2>
+<ul><li>A <strong>phone-number variant parser</strong> that matches an incoming number against payroll records across the different formats the same number can arrive in.</li><li>A full <strong>end-to-end client deployment</strong>: Meta configuration, webhook setup, application configuration and the deployment pipeline.</li><li>That deployment documented into a <strong>repeatable procedure</strong>, so the next one is not a rediscovery.</li></ul>
+<h2>Reliability</h2>
+<p>I share rotating deployment duty, investigate incidents using Application Insights, and communicate directly with the client through production incidents.</p>
+<h2>Result</h2>
+<p>A live employee-services channel and, just as usefully, a documented, repeatable way to stand up the next one.</p>
+<p class="conf">Employer systems, repositories, work items and client names are deliberately left out. The mechanism is the point.</p>
+</article>
+</body></html>
